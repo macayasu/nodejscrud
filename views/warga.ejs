@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form action="warga/tambah" method="POST" role="form">
+        <div class="form-group">
+            <label for="example">Nama</label>
+            <input type="text" name="nama" class="form-control" id="" required placeholder="Enter nama">
+        </div>
+        <div class="form-group">
+            <label for="example">Umur</label>
+            <input type="text" name="umur" class="form-control" id="" required placeholder="Enter Umur">
+        </div>
+        <div class="form-group">
+            <label for="example">pekerjaan</label>
+            <input type="text" name="pekerjaan" class="form-control" id="" required placeholder="Enter pekerjaan">
+        </div>
+        <div class="form-group">
+            <label for="example">Desa</label>
+            <select type="text" name="desa_id" class="form-control" id="" required>
+                <% for(var i=0; i< desa.length; i++) {%>
+                <option value="<%= desa[i]._id%>"><%= desa[i].nama %>
+                </option>
+                <% } %>
+            </select>
+        </div>
+        <button type="submit" class="btn btn=primary">Submit</button>
+    </form>
+</body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>

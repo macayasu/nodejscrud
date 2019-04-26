@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <p>Data Warga</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nama</th>
+        <th scope="col">Umur</th>
+        <th scope="col">Pekerjaan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% var no=1 %>
+      <% for(var i = 0; i < warga.length; i++) {%>
+      <tr>
+        <th scope="row"><%= no++ %></th>
+        <td><% warga[i].nama %></td>
+        <td><% warga[i].umur %></td>
+        <td><% warga[i].pekerjaan %></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+
+</html>
